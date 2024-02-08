@@ -5,7 +5,7 @@ const doc = {
       title: 'Posts',
       description: 'Description',
     },
-    host: 'https://socialmediasite-ok41.onrender.com/',
+    host: 'socialmediasite-ok41.onrender.com',
     schemes: ['https'],
 };
   

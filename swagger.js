@@ -5,8 +5,8 @@ const doc = {
       title: 'Posts',
       description: 'Description',
     },
-    host: 'localhost:4040',
-    schemes: ['http'],
+    host: 'https://socialmediasite-ok41.onrender.com/',
+    schemes: ['https'],
 };
   
 const outputFile = './swagger.json';

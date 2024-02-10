@@ -21,7 +21,7 @@ const createPost = async (req, res) => {
         const post = await PostModel.create({text, image, date, number_of_likes, user_name, userAvatar});
         // console.log(messages);
         if (post) {
-            res.status(200).json(post)
+            res.status(201).send(`${post._id}`);
         }
         
     } catch (err) {

@@ -1,0 +1,17 @@
+
+
+GET ALL POSTS:
+http://localhost:4040/posts
+https://socialmediasite-ok41.onrender.com/posts
+
+POST ONE POST:
+{
+    "text": "newPost",
+    "image": "imagepath",
+    "date": "2/10/24",
+    "number_of_likes": 1,
+    "user_name": "myName",
+    "user_avatar": "myAvatar"
+}
+http://localhost:4040/posts
+https://socialmediasite-ok41.onrender.com/posts

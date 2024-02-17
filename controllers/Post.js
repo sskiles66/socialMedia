@@ -39,6 +39,8 @@ const createPost = async (req, res) => {
 const updatePost = async (req, res) => {
   try {
     const { id } = req.params;
+    const { text, image, date, number_of_likes, user_name, user_avatar } =
+      req.body;
 
     if (!ObjectId.isValid(id)) {
       res.status(400).json("Must use a valid post id to update a post.");
@@ -47,7 +49,12 @@ const updatePost = async (req, res) => {
     const updatedPost = await PostModel.findOneAndUpdate(
       { _id: id },
       {
-        ...req.body, //Spreads out object to get data that will be the updated data
+        text,
+        image,
+        date,
+        number_of_likes,
+        user_name,
+        user_avatar
       }
     );
 

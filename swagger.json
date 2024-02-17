@@ -80,6 +80,33 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "example": "any"
+                },
+                "image": {
+                  "example": "any"
+                },
+                "date": {
+                  "example": "any"
+                },
+                "number_of_likes": {
+                  "example": "any"
+                },
+                "user_name": {
+                  "example": "any"
+                },
+                "user_avatar": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {

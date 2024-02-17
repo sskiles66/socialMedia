@@ -4,7 +4,10 @@ GET ALL POSTS:
 http://localhost:4040/posts
 https://socialmediasite-ok41.onrender.com/posts
 
+
 POST ONE POST:
+http://localhost:4040/posts
+https://socialmediasite-ok41.onrender.com/posts
 {
     "text": "newPost",
     "image": "imagepath",
@@ -13,5 +16,21 @@ POST ONE POST:
     "user_name": "myName",
     "user_avatar": "myAvatar"
 }
-http://localhost:4040/posts
-https://socialmediasite-ok41.onrender.com/posts
+
+
+UPDATE (PUT) ONE POST:
+http://localhost:4040/posts/update/{id}
+https://socialmediasite-ok41.onrender.com/posts/update/{id}
+{
+    "text": "updatedPost",
+    "image": "updatedimagepath",
+    "date": "2/17/24",
+    "number_of_likes": 1,
+    "user_name": "myName",
+    "user_avatar": "myAvatar"
+}
+
+
+DELETE ONE POST:
+http://localhost:4040/posts/delete/{id}
+https://socialmediasite-ok41.onrender.com/posts/delete/{id}

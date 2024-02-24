@@ -38,7 +38,7 @@ const createPost = async (req, res) => {
 const updatePost = async (req, res) => {
   try {
     const { id } = req.params;
-    const { text, image, date, number_of_likes } =
+    const { user_id, text, image, date, number_of_likes } =
       req.body;
 
     if (!ObjectId.isValid(id)) {
@@ -48,7 +48,7 @@ const updatePost = async (req, res) => {
     const updatedPost = await PostModel.findOneAndUpdate(
       { _id: id },
       {
-        user_id:id,
+        user_id,
         text,
         image,
         date,

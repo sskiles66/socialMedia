@@ -48,6 +48,7 @@ const updatePost = async (req, res) => {
     const updatedPost = await PostModel.findOneAndUpdate(
       { _id: id },
       {
+        user_id:id,
         text,
         image,
         date,

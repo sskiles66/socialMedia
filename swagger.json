@@ -84,6 +84,9 @@
             "schema": {
               "type": "object",
               "properties": {
+                "user_id": {
+                  "example": "any"
+                },
                 "text": {
                   "example": "any"
                 },

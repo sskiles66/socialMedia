@@ -39,6 +39,9 @@
             "schema": {
               "type": "object",
               "properties": {
+                "user_id": {
+                  "example": "any"
+                },
                 "text": {
                   "example": "any"
                 },
@@ -49,12 +52,6 @@
                   "example": "any"
                 },
                 "number_of_likes": {
-                  "example": "any"
-                },
-                "user_name": {
-                  "example": "any"
-                },
-                "user_avatar": {
                   "example": "any"
                 }
               }
@@ -98,6 +95,122 @@
                 },
                 "number_of_likes": {
                   "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          }
+        }
+      }
+    },
+    "/posts/delete/{id}": {
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/users/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "first_name": {
+                  "example": "any"
+                },
+                "last_name": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "phone_number": {
+                  "example": "any"
+                },
+                "user_name": {
+                  "example": "any"
+                },
+                "user_avatar": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          }
+        }
+      }
+    },
+    "/users/update/{id}": {
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "first_name": {
+                  "example": "any"
+                },
+                "last_name": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "phone_number": {
+                  "example": "any"
                 },
                 "user_name": {
                   "example": "any"
@@ -122,7 +235,7 @@
         }
       }
     },
-    "/posts/delete/{id}": {
+    "/users/delete/{id}": {
       "delete": {
         "description": "",
         "parameters": [

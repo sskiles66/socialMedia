@@ -9,28 +9,61 @@ POST ONE POST:
 http://localhost:4040/posts
 https://socialmediasite-ok41.onrender.com/posts
 {
-    "text": "newPost",
+    "user_id": "65d9036f1f7a68499ed18d8e",
+    "text": "First post",
     "image": "imagepath",
-    "date": "2/10/24",
-    "number_of_likes": 1,
-    "user_name": "myName",
-    "user_avatar": "myAvatar"
+    "date": "date",
+    "number_of_likes": 1
 }
-
 
 UPDATE (PUT) ONE POST:
 http://localhost:4040/posts/update/{id}
 https://socialmediasite-ok41.onrender.com/posts/update/{id}
 {
+    "user_id": "65d9036f1f7a68499ed18d8e",
     "text": "updatedPost",
     "image": "updatedimagepath",
     "date": "2/17/24",
-    "number_of_likes": 1,
-    "user_name": "myName",
-    "user_avatar": "myAvatar"
+    "number_of_likes": 1
 }
 
 
 DELETE ONE POST:
 http://localhost:4040/posts/delete/{id}
 https://socialmediasite-ok41.onrender.com/posts/delete/{id}
+
+
+
+///////////////////////////////////////////
+
+POST A USER:
+http://localhost:4040/users
+https://socialmediasite-ok41.onrender.com/users
+{
+    "first_name": "First",
+    "last_name": "Name",
+    "email": "test@gmail.com",
+    "phone_number": 123,
+    "user_name": "test_user",
+    "user_avatar": "imagepath"
+}
+
+GET ALL USERS:
+http://localhost:4040/posts
+https://socialmediasite-ok41.onrender.com/users
+
+UPDATE (PUT) ONE USER:
+http://localhost:4040/users/update/{id}
+https://socialmediasite-ok41.onrender.com/users/update/{id}
+{
+    "first_name": "First updated",
+    "last_name": "Name updated",
+    "email": "test@gmail.com",
+    "phone_number": 123,
+    "user_name": "test_user",
+    "user_avatar": "imagepath"
+}
+
+DELETE ONE USER:
+http://localhost:4040/users/delete/{id}
+https://socialmediasite-ok41.onrender.com/users/delete/{id}

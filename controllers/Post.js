@@ -17,15 +17,14 @@ const getPosts = async (req, res) => {
 
 const createPost = async (req, res) => {
   try {
-    const { text, image, date, number_of_likes, user_name, user_avatar } =
+    const { user_id, text, image, date, number_of_likes } =
       req.body;
     const post = await PostModel.create({
+      user_id,
       text,
       image,
       date,
       number_of_likes,
-      user_name,
-      user_avatar,
     });
     // console.log(messages);
     if (post) {
@@ -39,7 +38,7 @@ const createPost = async (req, res) => {
 const updatePost = async (req, res) => {
   try {
     const { id } = req.params;
-    const { text, image, date, number_of_likes, user_name, user_avatar } =
+    const { text, image, date, number_of_likes } =
       req.body;
 
     if (!ObjectId.isValid(id)) {
@@ -53,8 +52,6 @@ const updatePost = async (req, res) => {
         image,
         date,
         number_of_likes,
-        user_name,
-        user_avatar
       }
     );
 

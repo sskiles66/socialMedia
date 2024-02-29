@@ -3,9 +3,11 @@ const router = require("express").Router();
 
 const validation = require('../middleware/validate');
 
+const { auth, requiresAuth } = require('express-openid-connect');
 
 
-router.get("/", getPosts);
+
+router.get("/", requiresAuth(), getPosts);
 
 router.post("/", validation.postRules, createPost);
 
